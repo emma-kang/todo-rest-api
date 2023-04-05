@@ -1,5 +1,6 @@
 package com.ekang.todorestapi.entity;
 
+import com.ekang.todorestapi.model.TodoDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -25,5 +26,10 @@ public class Todo extends BaseTimeEntity {
         todo.task = task;
         todo.completed = completed;
         return todo;
+    }
+
+    public void updateTodo(TodoDto todoDto) {
+        task = todoDto.getTask();
+        completed = todoDto.getCompleted();
     }
 }
