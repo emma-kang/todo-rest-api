@@ -60,6 +60,7 @@ public class TodoController {
         }
         try {
             todoService.getTodoById(todoId);
+            todoDto.setId(todoId);
             todoService.updateTodo(todoDto);
             return ResponseEntity.ok().body(messageUtils.get("server.todo.update_success"));
         } catch (Exception ex) {
