@@ -6,6 +6,7 @@ import lombok.Getter;
 
 @Entity
 @Getter
+@Table(name = "todo")
 public class Todo extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
